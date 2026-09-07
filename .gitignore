@@ -1,0 +1,12 @@
+.DS_Store
+.env*
+*.pem
+/node_modules/
+/dist/
+/.vinext/
+/.next/
+next-env.d.ts
+/.wrangler/
+/outputs/
+/work/
+*.tsbuildinfo
