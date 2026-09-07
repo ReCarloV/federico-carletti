@@ -1,15 +1,6 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
-@import 'shadcn/tailwind.css';
-@theme inline {
-  --color-background: var(--background); --color-foreground: var(--foreground);
-  --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground);
-  --color-border: var(--border); --color-ring: var(--ring);
-  --color-muted: var(--muted); --color-muted-foreground: var(--muted-foreground);
-  --color-card: var(--card); --color-card-foreground: var(--foreground);
-  --color-accent: var(--muted); --color-accent-foreground: var(--foreground);
-  --font-sans: Arial, Helvetica, sans-serif; --radius-lg: .5rem;
-}
+/* Sito statico: nessuna dipendenza esterna. */
+*, *::before, *::after { box-sizing: border-box; }
+svg { display: block; vertical-align: middle; }
 :root {
   --background: #faf9f6; --foreground: #242b2c; --primary: #174c50; --primary-foreground: #fff;
   --muted: #ebefeb; --muted-foreground: #526164; --border: #d7ddd8; --ring: #267881; --card: #fff;
@@ -282,3 +273,12 @@ h1 em, h2 em { color: var(--petrol); font-family: Georgia, 'Times New Roman', se
 }
 h1, h2, h3, h4 { overflow-wrap: anywhere; }
 @media (max-height: 550px) { .site-header { position: relative; } }
+
+/* Domande frequenti native: funzionano anche senza JavaScript. */
+.faq-list { display: block; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-question { display: flex; align-items: center; justify-content: space-between; cursor: pointer; list-style: none; }
+.faq-question::-webkit-details-marker { display: none; }
+.faq-toggle { flex-shrink: 0; font-size: 1.5rem; line-height: 1; font-weight: 400; color: var(--petrol); transition: transform .2s; }
+.faq-item[open] .faq-toggle { transform: rotate(45deg); }
+.faq-item:not([open]) > .faq-answer { display: none; }

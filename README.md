@@ -1,44 +1,63 @@
 # Federico Carletti — Physio & Personal Training
 
-Sito professionale in italiano per personal training a Milano e Buccinasco e coaching online. Prima versione privata, senza moduli di raccolta dati, analytics, font remoti o servizi a pagamento aggiunti al progetto.
+Sito professionale statico in italiano: personal training a Milano e Buccinasco e coaching online.
 
-## Aggiornare il sito
+**Hosting previsto:** GitHub Pages, sul repository `ReCarloV/federico-carletti`.
 
-- `lib/site-content.ts`: contatti, fotografia, sedi, tariffe, domande frequenti e fasi del percorso.
-- `app/page.tsx`: testi della presentazione e struttura delle sezioni.
-- `app/globals.css`: colori, tipografia e adattamento a smartphone e tablet.
-- `app/layout.tsx`: titolo, descrizione e metadati per i motori di ricerca.
+Il sito non richiede un account ai visitatori, non dipende da ChatGPT o Sites e non ha un server applicativo. Non servono npm, React, un database, chiavi API o un processo di compilazione. Non carica font, mappe o script di terze parti: i collegamenti ai servizi esterni si aprono soltanto quando il visitatore li seleziona.
 
-Per inserire la fotografia, salva un’immagine ottimizzata in `public/images/federico.webp`, poi imposta `profile.portrait.src` su `/images/federico.webp` e aggiorna `profile.portrait.alt` per descrivere la fotografia effettiva. Il segnaposto scompare automaticamente. Il nome e il punto nel riquadro sono elementi tipografici, non una fotografia inventata.
+## File da aggiornare
 
-## Contenuti confermati e fonti
+- `index.html`: tutti i testi, contatti, prezzi, sedi, metadati e domande frequenti.
+- `styles.css`: colori, spazi, caratteri e adattamento a smartphone e tablet.
+- `favicon.svg`: icona del sito.
+- `.nojekyll`: indica a GitHub Pages di pubblicare i file così come sono.
 
-- Conferma dell’utente del 6 settembre 2026: laurea in Scienze Motorie, studente di Fisioterapia, personal training in presenza e coaching online, entrambe le sedi, pubblico generale, pubblicazione dei prezzi allegati, contatti e incontri di un’ora in sede o da remoto.
-- Formazione: profilo indicato dall’utente, https://www.linkedin.com/in/federicocarletti/ (parti pubbliche indicizzate). Laurea triennale in Scienze delle Attività Motorie e Sportive all’Università degli Studi di Milano. Fisioterapia presso Humanitas University, percorso indicato 2024–2027, in corso.
-- Tariffe: listino italiano fornito dall’utente, `AEEE427D-989F-4CE0-B36B-CF5D8B5F9027.jpeg`. Trascritte senza arrotondamenti o offerte aggiunte. Pagamento anticipato riferito ai pacchetti di coaching.
-- Indirizzo Canottieri Olona 1894: Alzaia Naviglio Grande 146, 20144 Milano, verificato sul sito ufficiale https://www.olona1894.it/ e sul regolamento del club.
-- Indirizzo Milago Fitness: Via Indipendenza 3, 20090 Buccinasco, verificato sul sito ufficiale https://www.milagofitness.it/.
-- Testi sull’approccio: bozza editoriale basata sul percorso personalizzato richiesto dall’utente. Da rileggere insieme prima della pubblicazione aperta.
+Per una modifica, aggiorna il file corrispondente e salvalo nel ramo `main` di GitHub. Pages pubblica automaticamente gli aggiornamenti. Le FAQ usano gli elementi HTML nativi `details` e `summary` e funzionano senza JavaScript.
 
-Il sito dichiara esplicitamente lo stato di studente di Fisioterapia. Non offre fisioterapia, riabilitazione, diagnosi o promesse di risultato e non contiene recensioni, certificazioni o numeri inventati.
+## Pubblicazione su GitHub Pages
 
-## Dati ancora da integrare
+Nel repository: **Settings → Pages → Deploy from a branch → main → /(root) → Save**.
 
-- Fotografia autentica di Federico (segnaposto visibile).
-- Indicazioni precise su abbigliamento e materiale per il primo incontro: la FAQ invita a concordarle.
-- Dati fiscali da mostrare nel sito pubblico e informazioni definitive sulla gestione delle richieste prima di aprire l’accesso al pubblico.
+Indirizzo previsto: `https://recarlov.github.io/federico-carletti/`.
 
-Non sono indicati disponibilità, orari, pagamenti digitali, servizi a domicilio o inclusione dell’accesso alle palestre, perché non definiti. I pulsanti WhatsApp aprono un messaggio precompilato che il visitatore sceglie se inviare; non creano una prenotazione. Email e telefono aprono i rispettivi programmi. Le mappe sono collegamenti esterni, senza incorporamenti.
+Il repository deve essere pubblico per usare Pages con GitHub Free. I file contengono esclusivamente i contenuti professionali e i recapiti destinati al sito pubblico.
 
-## Sviluppo
+Documentazione ufficiale: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 
-Progetto Sites/Vinext generato con pnpm. Conservare il file di lock e l’identificativo esistente in `.openai/hosting.json`.
+## Anteprima sul computer
+
+Apri `index.html` nel browser, oppure usa un server statico locale:
 
 ```sh
-pnpm install
-pnpm dev
-pnpm exec tsc --noEmit
-pnpm build
+python3 -m http.server 4173 --bind 127.0.0.1
 ```
 
-Il progetto non usa database, autenticazione applicativa o API esterne. L’anteprima ospitata resta privata tramite Sites. I metadati locali descrivono Milano e Buccinasco; non classificano l’attività come studio di fisioterapia. I font di sistema evitano richieste esterne.
+Poi apri `http://127.0.0.1:4173/`. I file CSS e l’icona usano percorsi relativi: il sito funziona anche nella sottocartella di GitHub Pages.
+
+## Inserire la fotografia
+
+Salva una fotografia autentica e ottimizzata, per esempio `images/federico.webp`. In `index.html`, sostituisci il blocco `div` con classe `portrait-placeholder`, dentro `figure.portrait-slot`, con:
+
+```html
+<img src="./images/federico.webp"
+     alt="Descrizione fedele della fotografia di Federico"
+     width="900" height="1100" fetchpriority="high">
+```
+
+Aggiorna la descrizione alternativa in base alla fotografia effettiva. Non usare il testo di esempio come descrizione definitiva.
+
+## Contenuti e dati ancora da integrare
+
+- Qualifiche, servizi, prezzi delle immagini fornite, sedi, recapiti e durata di un’ora sono stati confermati da Federico il 6 settembre 2026.
+- Il sito distingue la laurea in Scienze Motorie dal percorso in corso in Fisioterapia. Non offre prestazioni fisioterapiche o riabilitative.
+- Restano da integrare la fotografia autentica, i dati fiscali da pubblicare e le indicazioni definitive su abbigliamento e materiale per il primo incontro.
+- I testi sull’approccio sono una bozza editoriale da rileggere con Federico.
+- I pulsanti aprono WhatsApp con un testo che il visitatore sceglie se inviare. Non creano prenotazioni automatiche.
+- I pacchetti di coaching prevedono pagamento anticipato. Non sono indicate modalità di pagamento, inclusione dell’accesso alle palestre o disponibilità non confermate.
+
+Fonti degli indirizzi: https://www.olona1894.it/ e https://www.milagofitness.it/.
+
+## Verifiche della migrazione
+
+Controllati la presenza dei contenuti e di tutti i prezzi, le destinazioni dei contatti, i collegamenti interni, il caricamento degli asset con percorsi relativi e l’assenza di risorse Sites/ChatGPT. HTML e CSS standard, con un solo script JSON-LD descrittivo per i motori di ricerca e nessuno script applicativo.
