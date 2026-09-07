@@ -10,10 +10,17 @@ Il sito non richiede un account ai visitatori, non dipende da ChatGPT o Sites e 
 
 - `index.html`: tutti i testi, contatti, prezzi, sedi, metadati e domande frequenti.
 - `styles.css`: colori, spazi, caratteri e adattamento a smartphone e tablet.
-- `favicon.svg`: icona del sito.
+- `federico-carletti-logo.png`: logo FC con figura in movimento, blu e turchese.
+- `favicon.svg` e `apple-touch-icon.png`: versioni del logo per schede e schermata Home.
 - `.nojekyll`: indica a GitHub Pages di pubblicare i file così come sono.
 
 Per una modifica, aggiorna il file corrispondente e salvalo nel ramo `main` di GitHub. Pages pubblica automaticamente gli aggiornamenti. Le FAQ usano gli elementi HTML nativi `details` e `summary` e funzionano senza JavaScript.
+
+## Identità visiva
+
+Palette coordinata con PersonalCoach, FisioBrief e Workout Archive: blu `#087df0`, turchese `#08bdb5`, blu notte `#061226`, fondo chiaro `#fbfdff`. I colori per testi e pulsanti usano tonalità più scure per mantenere un contrasto leggibile. Le variabili sono all’inizio di `styles.css`.
+
+Logo generato con lo strumento imagegen integrato: monogramma FC con una figura in movimento, usato nella testata, nel segnaposto fotografico e nel piè di pagina. Il logo non sostituisce la futura fotografia autentica.
 
 ## Pubblicazione su GitHub Pages
 
