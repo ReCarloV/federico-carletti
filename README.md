@@ -2,7 +2,7 @@
 
 Sito professionale statico in italiano: personal training a Milano e Buccinasco e coaching online.
 
-**Hosting previsto:** GitHub Pages, sul repository `ReCarloV/federico-carletti`.
+**Hosting:** GitHub Pages, sul repository `ReCarloV/federico-carletti`.
 
 Il sito non richiede un account ai visitatori, non dipende da ChatGPT o Sites e non ha un server applicativo. Non servono npm, React, un database, chiavi API o un processo di compilazione. Non carica font, mappe o script di terze parti: i collegamenti ai servizi esterni si aprono soltanto quando il visitatore li seleziona.
 
@@ -19,7 +19,7 @@ Per una modifica, aggiorna il file corrispondente e salvalo nel ramo `main` di G
 
 Nel repository: **Settings → Pages → Deploy from a branch → main → /(root) → Save**.
 
-Indirizzo previsto: `https://recarlov.github.io/federico-carletti/`.
+Indirizzo del sito: `https://recarlov.github.io/federico-carletti/`.
 
 Il repository deve essere pubblico per usare Pages con GitHub Free. I file contengono esclusivamente i contenuti professionali e i recapiti destinati al sito pubblico.
 
