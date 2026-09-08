@@ -10,11 +10,12 @@ Il sito non richiede un account ai visitatori, non dipende da ChatGPT o Sites e 
 
 - `index.html`: tutti i testi, contatti, prezzi, sedi, metadati e domande frequenti.
 - `styles.css`: colori, spazi, caratteri e adattamento a smartphone e tablet.
+- `navigation.js`: evidenzia nel menu la sezione in lettura; nessuna dipendenza esterna.
 - `federico-carletti-logo.png`: logo FC con figura in movimento, blu e turchese.
 - `favicon.svg` e `apple-touch-icon.png`: versioni del logo per schede e schermata Home.
 - `.nojekyll`: indica a GitHub Pages di pubblicare i file così come sono.
 
-Per una modifica, aggiorna il file corrispondente e salvalo nel ramo `main` di GitHub. Pages pubblica automaticamente gli aggiornamenti. Le FAQ usano gli elementi HTML nativi `details` e `summary` e funzionano senza JavaScript.
+Per una modifica, aggiorna il file corrispondente e salvalo nel ramo `main` di GitHub. Pages pubblica automaticamente gli aggiornamenti. Il menu rimane visibile durante lo scorrimento, anche su smartphone. `navigation.js` assegna `aria-current="location"` al collegamento della sezione in lettura, comprese le FAQ; non cambia URL o focus. I collegamenti e le FAQ native `details` / `summary` funzionano anche senza JavaScript.
 
 ## Identità visiva
 
@@ -56,7 +57,7 @@ Aggiorna la descrizione alternativa in base alla fotografia effettiva. Non usare
 
 ## Contenuti e dati ancora da integrare
 
-- Qualifiche, servizi, prezzi delle immagini fornite, sedi, recapiti e durata di un’ora sono stati confermati da Federico il 6 settembre 2026.
+- Qualifiche, servizi, sedi, recapiti e durata di un’ora sono stati confermati da Federico il 6 settembre 2026. Le tariffe sono state aggiornate su sua indicazione il 9 settembre 2026.
 - Il sito distingue la laurea in Scienze Motorie dal percorso in corso in Fisioterapia. Non offre prestazioni fisioterapiche o riabilitative.
 - Restano da integrare la fotografia autentica, i dati fiscali da pubblicare e le indicazioni definitive su abbigliamento e materiale per il primo incontro.
 - I testi sull’approccio sono una bozza editoriale da rileggere con Federico.
@@ -67,4 +68,14 @@ Fonti degli indirizzi: https://www.olona1894.it/ e https://www.milagofitness.it/
 
 ## Verifiche della migrazione
 
-Controllati la presenza dei contenuti e di tutti i prezzi, le destinazioni dei contatti, i collegamenti interni, il caricamento degli asset con percorsi relativi e l’assenza di risorse Sites/ChatGPT. HTML e CSS standard, con un solo script JSON-LD descrittivo per i motori di ricerca e nessuno script applicativo.
+Controllati la presenza dei contenuti e di tutti i prezzi, le destinazioni dei contatti, i collegamenti interni, il caricamento degli asset con percorsi relativi e l’assenza di risorse Sites/ChatGPT. HTML e CSS standard, JSON-LD descrittivo per i motori di ricerca e un piccolo script locale per la navigazione. Nessun tracciamento o richiesta di rete dello script.
+
+## Tariffe confermate il 9 settembre 2026
+
+| Percorso | Singola / 1 mese | 5 lezioni / 3 mesi | 10 lezioni / 6 mesi |
+| --- | --- | --- | --- |
+| Personal training in presenza | 60 € | 250 € (50 €/lezione) | 450 € (45 €/lezione) |
+| Coaching mensile | 70 € | 180 € (60 €/mese) | 360 € (60 €/mese) |
+| Check settimanale | 120 € | 300 € (100 €/mese) | 540 € (90 €/mese) |
+
+Obiettivo / Performance: a partire da 150 €/mese. Il totale di 540 € per 6 mesi di check settimanale è stato riconfermato espressamente.
