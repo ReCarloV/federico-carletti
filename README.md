@@ -11,7 +11,7 @@ Il sito non richiede un account ai visitatori, non dipende da ChatGPT o Sites e 
 - `index.html`: versione italiana, con testi, contatti, prezzi, sedi, metadati e domande frequenti.
 - `en.html`: versione inglese completa, compresi i messaggi precompilati di WhatsApp.
 - `styles.css`: colori, spazi, caratteri e adattamento a smartphone e tablet.
-- `navigation.js`: evidenzia nel menu la sezione in lettura e chiude il menu delle lingue con Escape, al clic esterno o quando il focus esce; nessuna dipendenza esterna.
+- `navigation.js`: evidenzia nel menu la sezione in lettura e chiude il menu delle lingue con Escape o al clic esterno; nessuna dipendenza esterna. Il cambio di focus non chiude il menu, per non interrompere il clic sui collegamenti.
 - `federico-carletti-logo.png`: logo FC con figura in movimento, blu e turchese.
 - `federico-carletti-ritratto.jpg`: fotografia autentica fornita da Federico per l’apertura.
 - `favicon.svg` e `apple-touch-icon.png`: versioni del logo per schede e schermata Home.
