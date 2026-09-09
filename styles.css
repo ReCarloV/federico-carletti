@@ -53,7 +53,6 @@ h1 em, h2 em { color: var(--brand-blue-dark); font-family: inherit; font-weight:
 .hero-location { display: flex; align-items: center; gap: 9px; margin-top: 25px; color: var(--quiet); font-size: .8125rem; }
 .portrait-slot { position: relative; min-width: 0; width: min(100%, 340px); justify-self: center; }
 .portrait-slot > .portrait-photo { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; border-radius: 50%; box-shadow: 0 12px 30px rgb(8 61 114 / 10%); }
-.portrait-slot figcaption { display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 17px 0 0; color: var(--brand-blue-dark); font-size: .8125rem; }
 .credential-strip { background: #e9f2fc; border-block: 1px solid var(--border); }
 .credential-strip .container { display: flex; justify-content: space-between; gap: 20px; padding-block: 23px; color: var(--quiet); font-size: .8125rem; }
 .credential-strip span { display: flex; align-items: center; gap: 12px; }
@@ -78,8 +77,6 @@ h1 em, h2 em { color: var(--brand-blue-dark); font-family: inherit; font-weight:
   .button { padding-inline: 17px; gap: 15px; }
   .hero-location { font-size: .8125rem; }
   .portrait-slot { width: min(100%, 240px); }
-  .portrait-slot figcaption { justify-content: center; text-align: center; }
-  .portrait-slot figcaption > svg { display: none; }
   .credential-strip .container { flex-direction: column; gap: 12px; padding-block: 22px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
