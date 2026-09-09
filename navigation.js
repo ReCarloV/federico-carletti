@@ -68,7 +68,6 @@
       event.preventDefault();
     }
   });
-  switcher.addEventListener('focusout', event => {
-    if (!switcher.contains(event.relatedTarget)) switcher.open = false;
-  });
+  // Non chiudere su focusout: può precedere il clic su un collegamento
+  // e nasconderlo prima che il browser esegua la navigazione.
 })();
