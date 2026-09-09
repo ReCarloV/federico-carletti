@@ -51,3 +51,24 @@
   }
   measureHeader();
 })();
+
+/* Il selettore usa collegamenti reali: nessuna preferenza salvata o redirect. */
+(() => {
+  const switcher = document.querySelector('.language-switcher');
+  if (!switcher) return;
+  const summary = switcher.querySelector('summary');
+
+  document.addEventListener('click', event => {
+    if (!switcher.contains(event.target)) switcher.open = false;
+  });
+  switcher.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && switcher.open) {
+      switcher.open = false;
+      summary.focus();
+      event.preventDefault();
+    }
+  });
+  switcher.addEventListener('focusout', event => {
+    if (!switcher.contains(event.relatedTarget)) switcher.open = false;
+  });
+})();
