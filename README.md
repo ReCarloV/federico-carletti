@@ -12,6 +12,7 @@ Il sito non richiede un account ai visitatori, non dipende da ChatGPT o Sites e 
 - `styles.css`: colori, spazi, caratteri e adattamento a smartphone e tablet.
 - `navigation.js`: evidenzia nel menu la sezione in lettura; nessuna dipendenza esterna.
 - `federico-carletti-logo.png`: logo FC con figura in movimento, blu e turchese.
+- `federico-carletti-ritratto.jpg`: fotografia autentica fornita da Federico per l’apertura.
 - `favicon.svg` e `apple-touch-icon.png`: versioni del logo per schede e schermata Home.
 - `.nojekyll`: indica a GitHub Pages di pubblicare i file così come sono.
 
@@ -21,7 +22,7 @@ Per una modifica, aggiorna il file corrispondente e salvalo nel ramo `main` di G
 
 Palette coordinata con PersonalCoach, FisioBrief e Workout Archive: blu `#087df0`, turchese `#08bdb5`, blu notte `#061226`, fondo chiaro `#fbfdff`. I colori per testi e pulsanti usano tonalità più scure per mantenere un contrasto leggibile. Le variabili sono all’inizio di `styles.css`.
 
-Logo generato con lo strumento imagegen integrato: monogramma FC con una figura in movimento, usato nella testata, nel segnaposto fotografico e nel piè di pagina. Il logo non sostituisce la futura fotografia autentica.
+Logo generato con lo strumento imagegen integrato: monogramma FC con una figura in movimento, usato nella testata, nel piè di pagina e nelle icone del sito. L’apertura contiene il ritratto autentico fornito da Federico.
 
 ## Pubblicazione su GitHub Pages
 
@@ -43,23 +44,17 @@ python3 -m http.server 4173 --bind 127.0.0.1
 
 Poi apri `http://127.0.0.1:4173/`. I file CSS e l’icona usano percorsi relativi: il sito funziona anche nella sottocartella di GitHub Pages.
 
-## Inserire la fotografia
+## Fotografia
 
-Salva una fotografia autentica e ottimizzata, per esempio `images/federico.webp`. In `index.html`, sostituisci il blocco `div` con classe `portrait-placeholder`, dentro `figure.portrait-slot`, con:
+Il ritratto `federico-carletti-ritratto.jpg` è la fotografia fornita da Federico il 9 settembre 2026. Il file originale è conservato senza ritocchi. In apertura viene mostrato in un formato circolare compatto: massimo 340 px su desktop e 240 px su smartphone.
 
-```html
-<img src="./images/federico.webp"
-     alt="Descrizione fedele della fotografia di Federico"
-     width="900" height="1100" fetchpriority="high">
-```
-
-Aggiorna la descrizione alternativa in base alla fotografia effettiva. Non usare il testo di esempio come descrizione definitiva.
+Per sostituirlo, aggiorna il file oppure il percorso `src` di `img.portrait-photo` in `index.html`. Mantieni `width`, `height` e testo alternativo coerenti con la nuova fotografia. Le dimensioni di visualizzazione si regolano con `.portrait-slot` in `styles.css`.
 
 ## Contenuti e dati ancora da integrare
 
 - Qualifiche, servizi, sedi, recapiti e durata di un’ora sono stati confermati da Federico il 6 settembre 2026. Le tariffe sono state aggiornate su sua indicazione il 9 settembre 2026.
 - Il sito distingue la laurea in Scienze Motorie dal percorso in corso in Fisioterapia. Non offre prestazioni fisioterapiche o riabilitative.
-- Restano da integrare la fotografia autentica, i dati fiscali da pubblicare e le indicazioni definitive su abbigliamento e materiale per il primo incontro.
+- Restano da integrare i dati fiscali da pubblicare e le indicazioni definitive su abbigliamento e materiale per il primo incontro.
 - I testi sull’approccio sono una bozza editoriale da rileggere con Federico.
 - I pulsanti aprono WhatsApp con un testo che il visitatore sceglie se inviare. Non creano prenotazioni automatiche.
 - I pacchetti di coaching prevedono pagamento anticipato. Non sono indicate modalità di pagamento, inclusione dell’accesso alle palestre o disponibilità non confermate.
