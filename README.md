@@ -1,6 +1,6 @@
 # Federico Carletti — Physio & Personal Training
 
-Sito professionale statico in italiano: personal training a Milano e Buccinasco e coaching online.
+Sito professionale statico in italiano e inglese: personal training a Milano e Buccinasco e coaching online. L’indirizzo principale apre sempre la versione italiana.
 
 **Hosting:** GitHub Pages, sul repository `ReCarloV/federico-carletti`.
 
@@ -8,15 +8,24 @@ Il sito non richiede un account ai visitatori, non dipende da ChatGPT o Sites e 
 
 ## File da aggiornare
 
-- `index.html`: tutti i testi, contatti, prezzi, sedi, metadati e domande frequenti.
+- `index.html`: versione italiana, con testi, contatti, prezzi, sedi, metadati e domande frequenti.
+- `en.html`: versione inglese completa, compresi i messaggi precompilati di WhatsApp.
 - `styles.css`: colori, spazi, caratteri e adattamento a smartphone e tablet.
-- `navigation.js`: evidenzia nel menu la sezione in lettura; nessuna dipendenza esterna.
+- `navigation.js`: evidenzia nel menu la sezione in lettura e chiude il menu delle lingue con Escape, al clic esterno o quando il focus esce; nessuna dipendenza esterna.
 - `federico-carletti-logo.png`: logo FC con figura in movimento, blu e turchese.
 - `federico-carletti-ritratto.jpg`: fotografia autentica fornita da Federico per l’apertura.
 - `favicon.svg` e `apple-touch-icon.png`: versioni del logo per schede e schermata Home.
 - `.nojekyll`: indica a GitHub Pages di pubblicare i file così come sono.
 
 Per una modifica, aggiorna il file corrispondente e salvalo nel ramo `main` di GitHub. Pages pubblica automaticamente gli aggiornamenti. Il menu rimane visibile durante lo scorrimento, anche su smartphone. `navigation.js` assegna `aria-current="location"` al collegamento della sezione in lettura, comprese le FAQ; non cambia URL o focus. I collegamenti e le FAQ native `details` / `summary` funzionano anche senza JavaScript.
+
+## Italiano e inglese
+
+Il menu “Lingua / Language”, in alto a destra, collega le due pagine. Su smartphone mostra la sigla IT o EN; aprendolo si leggono i nomi completi Italiano ed English. La lingua corrente è contrassegnata da una spunta. Il menu nativo e i suoi collegamenti funzionano anche senza JavaScript.
+
+La pagina principale `/federico-carletti/` resta italiana; `/federico-carletti/en.html` apre direttamente la versione inglese. Non vengono usati cookie, memoria locale o riconoscimento della lingua del browser per cambiare la lingua in automatico.
+
+Quando aggiorni prezzi, servizi, formazione, sedi o FAQ, modifica **entrambe le pagine** nello stesso aggiornamento. I testi inglesi sono una traduzione dei contenuti confermati e non aggiungono qualifiche o prestazioni. Mantieni identici gli ID delle sezioni per condividere lo script di navigazione. Ogni pagina ha titolo, descrizione, lingua HTML e URL canonico propri, oltre ai collegamenti `hreflang` reciproci; `x-default` indica l’italiano. Foto, logo, CSS e JavaScript sono condivisi.
 
 ## Identità visiva
 
