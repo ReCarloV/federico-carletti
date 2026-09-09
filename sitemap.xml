@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://recarlov.github.io/federico-carletti/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://recarlov.github.io/federico-carletti/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://recarlov.github.io/federico-carletti/en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://recarlov.github.io/federico-carletti/" />
+  </url>
+  <url>
+    <loc>https://recarlov.github.io/federico-carletti/en.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://recarlov.github.io/federico-carletti/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://recarlov.github.io/federico-carletti/en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://recarlov.github.io/federico-carletti/" />
+  </url>
+</urlset>

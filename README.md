@@ -10,6 +10,7 @@ Il sito non richiede un account ai visitatori, non dipende da ChatGPT o Sites e 
 
 - `index.html`: versione italiana, con testi, contatti, prezzi, sedi, metadati e domande frequenti.
 - `en.html`: versione inglese completa, compresi i messaggi precompilati di WhatsApp.
+- `sitemap.xml`: le due pagine canoniche e le corrispondenze tra italiano e inglese per Google.
 - `styles.css`: colori, spazi, caratteri e adattamento a smartphone e tablet.
 - `navigation.js`: evidenzia nel menu la sezione in lettura e chiude il menu delle lingue con Escape o al clic esterno; nessuna dipendenza esterna. Il cambio di focus non chiude il menu, per non interrompere il clic sui collegamenti.
 - `federico-carletti-logo.png`: logo FC con figura in movimento, blu e turchese.
@@ -63,12 +64,21 @@ Per sostituirlo, aggiorna il file oppure il percorso `src` di `img.portrait-phot
 
 - Qualifiche, servizi, sedi, recapiti e durata di un’ora sono stati confermati da Federico il 6 settembre 2026. Le tariffe sono state aggiornate su sua indicazione il 9 settembre 2026.
 - Il sito distingue la laurea in Scienze Motorie dal percorso in corso in Fisioterapia. Non offre prestazioni fisioterapiche o riabilitative.
-- Restano da integrare i dati fiscali da pubblicare e le indicazioni definitive su abbigliamento e materiale per il primo incontro.
+- Federico ha confermato di operare come libero professionista con partita IVA `04991390230`, riportata nel piè di pagina di entrambe le lingue.
+- Le indicazioni definitive su abbigliamento e materiale restano da concordare al primo contatto, come confermato da Federico.
 - I testi sull’approccio sono una bozza editoriale da rileggere con Federico.
 - I pulsanti aprono WhatsApp con un testo che il visitatore sceglie se inviare. Non creano prenotazioni automatiche.
 - I pacchetti di coaching prevedono pagamento anticipato. Non sono indicate modalità di pagamento, inclusione dell’accesso alle palestre o disponibilità non confermate.
 
 Fonti degli indirizzi: https://www.olona1894.it/ e https://www.milagofitness.it/.
+
+## Google Search Console
+
+La proprietà usa il prefisso URL `https://recarlov.github.io/federico-carletti/`, che comprende entrambe le lingue e limita la gestione a questo sito. La sitemap da inviare in Search Console è `https://recarlov.github.io/federico-carletti/sitemap.xml`.
+
+Mantieni il meta tag `google-site-verification` nella home italiana: serve a confermare la proprietà del sito anche nei controlli successivi di Google. Non è uno script di tracciamento. Quando aggiungi nuove pagine, aggiorna la sitemap con gli URL canonici e le corrispondenti lingue. Non inserire nella sitemap le ancore delle sezioni o il duplicato `/index.html` della home.
+
+Lo stato effettivo di indicizzazione si controlla con Controllo URL in Search Console. La pubblicazione e l’invio della sitemap non garantiscono l’inclusione nei risultati né una posizione specifica.
 
 ## Verifiche della migrazione
 
